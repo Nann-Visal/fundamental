@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>JavaScript This keyword</title>
+    </head>
+    <body>
+        <!-- <script>
+            var value=50;
+            function myfunc(){
+                var value=100;
+                alert("this value : "+value);
+                alert("this value : "+this.value);
+            }
+            myfunc();
+        </script> -->
+        <!-- <script>
+            const random={
+                name:"Nann Visal",
+                infor(){
+                    console.log("Hi my name is "+this.name);
+                }
+            }
+            random.infor();
+        </script> -->
+        <script>
+            const random={
+                name:"Nann Visal",
+                video:["Java","C++","Flutter"],
+                infor(){
+                    this.video.forEach(function(tag){
+                        console.log(this.name,tag)
+                    },this)
+                }
+            }
+            random.infor();
+        </script>
+    </body>
+</html>

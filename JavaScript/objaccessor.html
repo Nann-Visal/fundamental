@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>Object Accessor</h1>
+        <p id="demo"></p>
+        <script>
+            var car = {
+                model:"BMW007",
+                color:"Blue",
+                fuel_type:"Diesel",
+                get fuel(){
+                    return this.fuel_type;
+                },
+            };
+            document.getElementById("demo").innerHTML=car.fuel;
+        </script>
+        <script>
+            var car = {
+                model:"Audi",
+                color:"red",
+                fuel_type:"",
+                set fuel(fuel){
+                    this.fuel_type=fuel;
+                }
+            }
+            car.fuel="Petrol";
+            document.getElementById("demo").innerHTML=car.fuel_type;
+        </script>
+    </body>
+</html>
